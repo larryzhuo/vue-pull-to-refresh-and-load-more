@@ -3,6 +3,7 @@ a scroll component with function of pull down refresh and pull up load more for 
 
 I create a scroller component for vue base iscroll-lite. it support more than one scroller in one page like this:
 
+```html
 <div>
    <scroller :hswipe-stop-scroll="true" :init-load-more="true" :wrapper-id="'wrapper0'" :scroll-id="'scroll0'" :need-refresh="true" :refresh-call="refresh" :load-more-call="loadMore" :has-more-data="alls[0].hasMore" :more-tip="alls[0].list.length>0">
   </scroller>
@@ -11,6 +12,7 @@ I create a scroller component for vue base iscroll-lite. it support more than on
    <scroller :hswipe-stop-scroll="true" :wrapper-id="'wrapper1'" :scroll-id="'scroll1'" :need-refresh="true" :refresh-call="refresh" :load-more-call="loadMore" :has-more-data="alls[1].hasMore" :more-tip="alls[1].list.length>0">      
    </scroller>
 </div>
+```
 
 as you can see, this scroller has some props:
 1.hswipe-stop-scroll:  work for when you swipe scroll, stop vertical scroll.
@@ -22,6 +24,7 @@ as you can see, this scroller has some props:
 7.has-more-data:　work for load more status, if false, it will show 'no more data'.
 8.more-tip: work for control 'no more data' tip shows.
 
+```javascript
 <script>
 import Scroller from './iscroller/ZZScroll.vue'
 
@@ -92,5 +95,5 @@ export default{
     }
 }
 </script>
-
+```
 above, I give a example to use in a ajax request base vue. when you $broadcast 'refresh-finish' or 'load-finish'. remeber the transfer scrollId. and errorCode:0 is success. errorCode:-1 is false.
