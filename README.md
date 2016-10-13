@@ -1,30 +1,19 @@
 # vue-pull-to-refresh-and-load-more
 a scroll component with function of pull down refresh and pull up load more for vue
 
-I create a scroller component for vue base iscroll-lite. it support more than one scroller in one page like this:
+I create a scroller component for vue base iscroll-lite. it support more than one scroller in one page
 
-```html
-<div>
-   <scroller :hswipe-stop-scroll="true" :init-load-more="true" :wrapper-id="'wrapper0'" :scroll-id="'scroll0'" :need-refresh="true" :refresh-call="refresh" :load-more-call="loadMore" :has-more-data="alls[0].hasMore" :more-tip="alls[0].list.length>0">
-  </scroller>
-</div>
-<div>
-   <scroller :hswipe-stop-scroll="true" :wrapper-id="'wrapper1'" :scroll-id="'scroll1'" :need-refresh="true" :refresh-call="refresh" :load-more-call="loadMore" :has-more-data="alls[1].hasMore" :more-tip="alls[1].list.length>0">      
-   </scroller>
-</div>
-```
-
-as you can see, this scroller has some props:
-- hswipe-stop-scroll:  work for when you swipe scroll, stop vertical scroll.
-- init-load-more:   work for if you need load data when init this component.
-- wrapper-id and scroll-id:  work for specify many scroller in one page.
-- need-refresh:  work for if you need the refresh and load more function.
-- refresh-call:  work for pull down refresh call.
-- load-more-call:　work for pull up load more call.
-- has-more-data:　work for load more status, if false, it will show 'no more data'.
-- more-tip: work for control 'no more data' tip shows.
-
-```javascript
+```vue
+<template>
+   <div>
+      <scroller :hswipe-stop-scroll="true" :init-load-more="true" :wrapper-id="'wrapper0'" :scroll-id="'scroll0'" :need-refresh="true" :refresh-call="refresh" :load-more-call="loadMore" :has-more-data="alls[0].hasMore" :more-tip="alls[0].list.length>0">
+     </scroller>
+   </div>
+   <div>
+      <scroller :hswipe-stop-scroll="true" :wrapper-id="'wrapper1'" :scroll-id="'scroll1'" :need-refresh="true" :refresh-call="refresh" :load-more-call="loadMore" :has-more-data="alls[1].hasMore" :more-tip="alls[1].list.length>0">      
+      </scroller>
+   </div>
+</template>
 <script>
 import Scroller from './iscroller/ZZScroll.vue'
 
@@ -94,6 +83,17 @@ export default{
 }
 </script>
 ```
+
+as you can see, this scroller has some props:
+- hswipe-stop-scroll:  work for when you swipe scroll, stop vertical scroll.
+- init-load-more:   work for if you need load data when init this component.
+- wrapper-id and scroll-id:  work for specify many scroller in one page.
+- need-refresh:  work for if you need the refresh and load more function.
+- refresh-call:  work for pull down refresh call.
+- load-more-call:　work for pull up load more call.
+- has-more-data:　work for load more status, if false, it will show 'no more data'.
+- more-tip: work for control 'no more data' tip shows.
+
 above, I give a example to use in a ajax request base vue. when you $broadcast 'refresh-finish' or 'load-finish'. remeber the transfer scrollId. and errorCode:0 is success. errorCode:-1 is false.
 
 ![](http://ww3.sinaimg.cn/mw690/a5e2541bgw1f8qrr6en35j20k00zkdin.jpg)
