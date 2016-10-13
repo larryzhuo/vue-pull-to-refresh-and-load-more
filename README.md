@@ -15,14 +15,14 @@ I create a scroller component for vue base iscroll-lite. it support more than on
 ```
 
 as you can see, this scroller has some props:
-1. hswipe-stop-scroll:  work for when you swipe scroll, stop vertical scroll.
-2. init-load-more:   work for if you need load data when init this component.
-3. wrapper-id and scroll0:  work for specify many scroller in one page.
-4. need-refresh:  work for if you need the refresh and load more function.
-5. refresh-call:  work for pull down refresh call.
-6. load-more-call:　work for pull up load more call.
-7. has-more-data:　work for load more status, if false, it will show 'no more data'.
-8. more-tip: work for control 'no more data' tip shows.
+- hswipe-stop-scroll:  work for when you swipe scroll, stop vertical scroll.
+- init-load-more:   work for if you need load data when init this component.
+- wrapper-id and scroll0:  work for specify many scroller in one page.
+- need-refresh:  work for if you need the refresh and load more function.
+- refresh-call:  work for pull down refresh call.
+- load-more-call:　work for pull up load more call.
+- has-more-data:　work for load more status, if false, it will show 'no more data'.
+- more-tip: work for control 'no more data' tip shows.
 
 ```javascript
 <script>
