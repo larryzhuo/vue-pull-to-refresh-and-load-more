@@ -17,7 +17,7 @@ I create a scroller component for vue base iscroll-lite. it support more than on
 as you can see, this scroller has some props:
 - hswipe-stop-scroll:  work for when you swipe scroll, stop vertical scroll.
 - init-load-more:   work for if you need load data when init this component.
-- wrapper-id and scroll0:  work for specify many scroller in one page.
+- wrapper-id and scroll-id:  work for specify many scroller in one page.
 - need-refresh:  work for if you need the refresh and load more function.
 - refresh-call:  work for pull down refresh call.
 - load-more-call:　work for pull up load more call.
@@ -95,3 +95,9 @@ export default{
 </script>
 ```
 above, I give a example to use in a ajax request base vue. when you $broadcast 'refresh-finish' or 'load-finish'. remeber the transfer scrollId. and errorCode:0 is success. errorCode:-1 is false.
+
+![](http://ww3.sinaimg.cn/mw690/a5e2541bgw1f8qrr6en35j20k00zkdin.jpg)
+![](http://ww3.sinaimg.cn/mw690/a5e2541bgw1f8qrr5znlsj20k00zkgpx.jpg)
+![](http://ww1.sinaimg.cn/mw690/a5e2541bgw1f8qrr5mh9wj20k00zktcd.jpg)
+![](http://ww4.sinaimg.cn/mw690/a5e2541bgw1f8qrr54yfjj20k00zk42c.jpg)
+
